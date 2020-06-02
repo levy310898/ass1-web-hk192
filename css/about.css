@@ -1,0 +1,25 @@
+.about-pic{
+    width:50%;
+}
+
+.about-pic img{
+    width: 100%;
+}
+
+.about-content{
+    padding: 50px;
+    width: 50%;
+
+}
+.about-content__text{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-content__name{
+    font-size: 14px;
+    text-align: right;
+    text-transform: capitalize;
+    font-style: italic;
+}

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root{
+    --background-color:#f4f4f4;
+    --color-orange: #F05123;
+    --color-orange-dark:#F3500F;
+    --color-orange-light: #F16527;
+    --color-gray-light: #e4e4e4;
+    --color-text: #333333;
+    --color-gray-light-1:#f1f1f1;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+h1{
+    font-size:50px !important;
+    line-height: 80px !important;
+}
+
+h2{
+    font-size:40px !important;
+    line-height:50px !important;
+}
+
+h3{
+    font-size:20px !important;
+    line-height: 36px !important;
+}
+
+.color-text{
+    color:var(--color-text);
+}
+
+@keyframes scaleUp-X{
+    0%{
+        transform: scaleX(0);
+        transform-origin: 0% 0%;
+    }
+
+    100%{
+        transform: scaleX(100%);
+        transform-origin: 0% 0%;
+    }
+}
+
+@keyframes scaleDown-X{
+    0%{
+        transform :scaleX(100%);
+        transform-origin: 0% 0%;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: 0% 0%;
+    }
+}
+
+.title{
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(211, 198, 198), #F16527);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ##################main-nav######################## */
+.main-nav{
+    position: fixed !important;
+    top:20px;
+    left:0;
+    transition: .3s linear;
+    width:100%;
+    z-index: 1000 !important;
+    opacity:0;
+    visibility: hidden;
+    transition: all .2s ease-in;
+}
+
+.main-nav--show{
+    opacity:1;
+    visibility: visible;
+}
+
+.main-nav--black{
+    background-color:#000;
+}
+
+.main-nav--move{
+    transform: translateY(-20px);
+}
+.navbar-brand{
+    font-size:35px !important;
+    font-family: 'Pacifico', cursive;
+    color: var(--color-orange-light) !important;
+}
+
+.navbar-brand span{
+    color :#00e8e8;
+}
+
+.nav-item{
+    position: relative;
+    margin-right:1rem;
+    transition: all .2s ease-in;
+}
+
+.nav-link{
+    color: var(--background-color)!important;
+    transition: all .2s ease-in;
+}
+
+.item-active:before{
+    content: "";
+    width:100%;
+    height:2px;
+    background:#fff;
+    position: absolute;
+    left:0;
+    top: calc(100% + 5px );
+}
+
+.nav-item--animate:hover:before{
+    content: "";
+    width:100%;
+    height:2px;
+    background:#fff;
+    position: absolute;
+    left:0;
+    top: calc(100% + 5px );
+    animation: scaleUp-X .4s ease;
+}
+
+.scaleX-down:before{
+    animation: scaleDown-X .4s ease !important;
+}
+
+/* ###################### end main-nav ####################################### */
+
+/* ##################################footer####################################### */
+.footer{
+    background: #252B2D;
+    color:#f1f1f1;
+}
+.media-list{
+    list-style: none;
+}
+
+.media-link{
+    text-decoration: none;
+    color:#8E979D;
+    font-size:25px;
+    transition: all .2s ease-in;
+}
+
+.media-link:nth-child(1):hover{
+    color:#3072c4 ;
+}
+
+.media-link:nth-child(2):hover{
+    color:#fc2c10e8; 
+}
+
+.media-link:nth-child(3):hover{ 
+    color:rgb(72, 153, 173); 
+}
+.footer__header{
+    font-size:25px;
+    margin-bottom: 20px;
+}
+.media-link{
+    display:inline-block;
+    margin: 10px ;
+}
+
+.footer__list{
+    list-style: none;
+}
+
+.footer__item{
+    margin: 10px 0;
+}
+.footer__link{
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: all .2s ease-in;
+}
+
+.footer__link i{
+    margin-right:10px;
+}
+
+.footer__link:hover{
+    text-decoration: none;
+    color: var(--color-orange-light);
+}
+
+.footer-text{
+    background-color:#23272A;
+    text-align: center;
+    padding: 20px;
+    font-size:16px;
+}
+
+.footer__qr{
+    display:flex;
+}
+
+.qr-box{
+    width:50%;
+    padding:5px;
+    margin: 0 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-box a{
+    margin: 10px 0;
+}
+.qr-box img{
+    width:100%;
+}
