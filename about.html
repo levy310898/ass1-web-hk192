@@ -28,7 +28,7 @@
     <div id="mark-nav"></div>
     <header class="header">
         <div class="sub-nav">
-            <nav class="navbar navbar-expand-lg navbar-dark nav-black">
+            <nav class="navbar navbar-expand-lg navbar-dark nav-black py-2">
                 <div class="container-lg">
                     <a href="index.html" class="navbar-brand">V<span>learning</span></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -40,16 +40,12 @@
                                 <a href="index.html" class="nav-link">Home</a>
                             </li>
         
-                            <li class="main-nav__about nav-item item-active" data-link="about">
-                                <a href="about.html" class="nav-link">About Us</a>
-                            </li>
-        
-                            <li class="main-nav__product nav-item" data-link="product">
+                            <li class="main-nav__about nav-item" data-link="about">
                                 <a href="product.html" class="nav-link">Product</a>
                             </li>
         
-                            <li class="main-nav__contact nav-item" data-link="contact">
-                                <a href="#contact" class="nav-link">Contact Us</a>
+                            <li class="main-nav__product nav-item item-active" data-link="product">
+                                <a href="about.html" class="nav-link">About Us</a>
                             </li>
                         </ul>
                     </div>
@@ -60,7 +56,7 @@
     </header>
 
     <main>
-        <section class="about-section py-5">
+        <section class="about-section py-5" style="background-color: #ddd">
             <h1 class="title">Về chúng tôi</h1>
             <div class="d-flex align-items-center justify-content-center mt-5" style="flex-wrap:wrap">
                 <div class="about-pic">
@@ -74,7 +70,28 @@
             </div>
         </section>
 
-        <section class="contact-us">
+        <section class="contact-section py-5">
+            <h1 class="title"> Liên hệ với chúng tôi</h1>
+
+            <div class="container">
+                <form action="/action_page.php" class="needs-validation" novalidate>
+                    <div class="form-group">
+                      <label for="uname" class="text-white">Username:</label>
+                      <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                      <div class="valid-feedback">Valid.</div>
+                      <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="pwd" class="text-white">Email:</label>
+                      <input type="email" class="form-control" id="pwd" placeholder="Enter Email" name="pswd" required>
+                      <div class="valid-feedback">Valid.</div>
+                      <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+
+                    <button type="submit" class="btn-md btn-primary-light btn-moveUp btn-moveDown">Submit</button>
+                  </form>
+            </div>
 
         </section>
     </main>
@@ -173,7 +190,7 @@
     </footer>
 
     <section class="main-nav nav-hide-lg">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark py-2">
             <div class="container-lg">
                 <a href="index.html" class="navbar-brand">V<span>learning</span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -185,16 +202,12 @@
                             <a href="index.html" class="nav-link">Home</a>
                         </li>
     
-                        <li class="main-nav__about nav-item item-active" data-link="about">
-                            <a href="about.html" class="nav-link">About Us</a>
-                        </li>
-    
-                        <li class="main-nav__product nav-item" data-link="product">
+                        <li class="main-nav__about nav-item" data-link="about">
                             <a href="product.html" class="nav-link">Product</a>
                         </li>
     
-                        <li class="main-nav__contact nav-item" data-link="contact">
-                            <a href="#contact" class="nav-link">Contact Us</a>
+                        <li class="main-nav__product nav-item item-active" data-link="product">
+                            <a href="about.html" class="nav-link">About Us</a>
                         </li>
                     </ul>
                 </div>
@@ -217,6 +230,26 @@
     <!-- js code -->
     <script src="./js/query.js"></script>
 
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
 <!-- ##########################javascript####################################### -->
 </body>
 </html>

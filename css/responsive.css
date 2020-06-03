@@ -75,7 +75,7 @@
     
     /* ###############index########### */
     .big-title{
-        font-size:30px !important;
+        font-size:35px !important;
         line-height: 40px !important;
     }
 
@@ -112,6 +112,7 @@
         line-height: var(--line-heght) !important;
         height: var(--line-height);
     }
+
 }
 
 @media only screen and (max-width: 600px){

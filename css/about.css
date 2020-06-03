@@ -23,3 +23,33 @@
     text-transform: capitalize;
     font-style: italic;
 }
+
+/* #####################contact############################ */
+
+.contact-section{
+    background-image: linear-gradient(to right,rgba(32, 32, 32, 0.7),rgba(136, 136, 136, 0.7)), url("../img/main-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+.invalid-feedback{
+    color: var(--color-orange-light) !important;
+}
+
+.was-validated .form-control:invalid{
+    border-color: var(--color-orange-light) !important;
+}
+
+.was-validated .form-control:valid{
+    border-color: var(--color-primary-light) !important;
+}
+
+.was-validated :valid~.valid-feedback{
+    color: var(--color-primary-light);
+}
+
+.form-control:focus{
+    border-color: var(--color-primary-light) !important;
+}

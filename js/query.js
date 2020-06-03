@@ -10,28 +10,28 @@ $(document).ready(function(){
     });
 
     //click effect in main-nav
-    $(".nav-item").click(function(){
-        if(!$(this).hasClass("item-active")){
-            var othersItem = $(this).siblings();
-            for(var item of othersItem){
-                if($(item).hasClass("item-active")){
-                    setTimeout(function(){
-                        $(item).removeClass("item-active");
-                    }
-                    ,300);
+    // $(".nav-item").click(function(){
+    //     if(!$(this).hasClass("item-active")){
+    //         var othersItem = $(this).siblings();
+    //         for(var item of othersItem){
+    //             if($(item).hasClass("item-active")){
+    //                 setTimeout(function(){
+    //                     $(item).removeClass("item-active");
+    //                 }
+    //                 ,300);
 
-                    setTimeout(function(){
-                        $(item).removeClass("scaleX-down");
-                    }
-                    ,400);
+    //                 setTimeout(function(){
+    //                     $(item).removeClass("scaleX-down");
+    //                 }
+    //                 ,400);
 
-                    $(item).addClass("scaleX-down");
-                    break;   
-                }
-            }
-            $(this).addClass("item-active");
-        }
-    });
+    //                 $(item).addClass("scaleX-down");
+    //                 break;   
+    //             }
+    //         }
+    //         $(this).addClass("item-active");
+    //     }
+    // });
 
     $('#mark-nav').waypoint(
         function(direction){
@@ -50,178 +50,8 @@ $(document).ready(function(){
     );
         // when move to new section main-nav item will change
         // header-nav
-        $('#header').waypoint(
-            function(direction){
-                if($(".main-nav__home").hasClass("item-active")==false){
-                    $(".main-nav__home").addClass("item-active");
-                }
-                let listItem = $(".main-nav__home").siblings(".nav-item");
-                for(let item of listItem){
-                    if($(item).hasClass("item-active")){
-                        console.log(item);
-                        setTimeout(function(){
-                            $(item).removeClass("item-active");
-                        }
-                        ,300);
-    
-                        setTimeout(function(){
-                            $(item).removeClass("scaleX-down");
-                        }
-                        ,400);
-    
-                        $(item).addClass("scaleX-down");
-                    }
-                }
-            },{
-                //offset:"0px",
-                offset:"-100px"
-            }
-        )
-            // header-nav
-        
-    // about nav
-        $('#about').waypoint(
-            function(direction){
-                $(".main-nav__about").addClass("item-active");
-                let listItem = $(".main-nav__about").siblings(".nav-item");
-                for(let item of listItem){
-                    if($(item).hasClass("item-active")){
-                        console.log(item);
-                        setTimeout(function(){
-                            $(item).removeClass("item-active");
-                        }
-                        ,300);
-    
-                        setTimeout(function(){
-                            $(item).removeClass("scaleX-down");
-                        }
-                        ,400);
-    
-                        $(item).addClass("scaleX-down");
-                    }
-                }
-            },{
-                offset:"-50px"
-            }
-        )
-        // product-nav
-        $('#product').waypoint(
-            function(direction){
-                $(".main-nav__product").addClass("item-active");
-                let listItem = $(".main-nav__product").siblings(".nav-item");
-                for(let item of listItem){
-                    if($(item).hasClass("item-active")){
-                        console.log(item);
-                        setTimeout(function(){
-                            $(item).removeClass("item-active");
-                        }
-                        ,300);
-    
-                        setTimeout(function(){
-                            $(item).removeClass("scaleX-down");
-                        }
-                        ,400);
-    
-                        $(item).addClass("scaleX-down");
-                    }
-                }
-            },{
-                offset:"-5px"
-            }
-        )
-
-            // header-nav
-            $('#infomation').waypoint(
-                function(direction){
-                    $(".main-nav__info").addClass("item-active");
-                    let listItem = $(".main-nav__info").siblings(".nav-item");
-                    for(let item of listItem){
-                        if($(item).hasClass("item-active")){
-                            console.log(item);
-                            setTimeout(function(){
-                                $(item).removeClass("item-active");
-                            }
-                            ,300);
-        
-                            setTimeout(function(){
-                                $(item).removeClass("scaleX-down");
-                            }
-                            ,400);
-        
-                            $(item).addClass("scaleX-down");
-                        }
-                    }
-                },{
-                    offset:"0px"
-                }
-            )
-
-                // header-nav
-        $('#price').waypoint(
-            function(direction){
-                $(".main-nav__price").addClass("item-active");
-                let listItem = $(".main-nav__price").siblings(".nav-item");
-                for(let item of listItem){
-                    if($(item).hasClass("item-active")){
-                        console.log(item);
-                        setTimeout(function(){
-                            $(item).removeClass("item-active");
-                        }
-                        ,300);
-    
-                        setTimeout(function(){
-                            $(item).removeClass("scaleX-down");
-                        }
-                        ,400);
-    
-                        $(item).addClass("scaleX-down");
-                    }
-                }
-            },{
-                offset:"0px"
-            }
-        )
-            // header-nav
-            $('#contact').waypoint(
-                function(direction){
-                    $(".main-nav__contact").addClass("item-active");
-                    let listItem = $(".main-nav__contact").siblings(".nav-item");
-                    for(let item of listItem){
-                        if($(item).hasClass("item-active")){
-                            console.log(item);
-                            setTimeout(function(){
-                                $(item).removeClass("item-active");
-                            }
-                            ,300);
-        
-                            setTimeout(function(){
-                                $(item).removeClass("scaleX-down");
-                            }
-                            ,400);
-        
-                            $(item).addClass("scaleX-down");
-                        }
-                    }
-                },{
-                    offset:"0px"
-                }
-            )
-        
-
-    // linkAndLocation.forEach(item=>{
-    //     $(item.Loc).waypoint(function(direction){
-    //         let listNavItem = $('.main-nav__item');
-    //         console.log(listNavItem);
-    //         for(let navItem of listNavItem){
-    //             let dataName = navItem.attr("data-link");
-    //             if (dataName == item.dataLink){
-    //                 $(navItem).addClass("item-active");
-    //             }
-    //         }
-    //     },{
-    //         offset:"0px"
-    //     }
-    //     )
+      
+     
     // })
     // Remove links that don't actually link to anything
     $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {

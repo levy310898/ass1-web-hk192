@@ -8,10 +8,6 @@ header{
     background-position: center;
     background-size: cover;
     position: relative;
-    /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-    -webkit-clip-path:polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-    -o-clip-path:polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-    -ms-clip-path:polygon(0 0, 100% 0, 100% 90%, 0% 100%); */
 
 }
 

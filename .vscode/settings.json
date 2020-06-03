@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.fontLigatures": null,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontSize": 16,
+    "liveServer.settings.port": 5501,
+}

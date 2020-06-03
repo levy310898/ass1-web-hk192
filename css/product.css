@@ -94,39 +94,6 @@
     padding-bottom:15px;
 }
 
-.btn-small,
-.btn:link,
-.btn:visited{
-    display:inline-block;
-    padding: 5px 15px;
-    font-size:14px;
-    border-radius: 19px;
-    color:white;
-    transform: translateY(0);
-    box-shadow: 0 0 0 0;
-}
-
-.btn-small:hover{
-    text-decoration: none;
-    color:white;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    transition: all .2s linear;
-}
-
-.btn-small:active{
-    transform: translateY(-1px);
-}
-
-.btn-cost{
-    background-color: #B80257;
-
-}
-
-.btn-free{
-    background-color: var(--color-orange-light);
-}
-
 .card-title{
     --line-heght: 1.4rem;
     display:block;
@@ -152,4 +119,45 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     -webkit-tap-highlight-color: transparent;
+}
+
+.product-pagination{
+    margin-top:30px;
+}
+
+.page__wrapper{
+    text-align: center;
+}
+
+.page-item{
+    font-size: 14px;
+    text-decoration: none;
+    display:inline-block;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
+
+.page-item:hover{
+    color:var(--color-primary-light);
+}
+
+.page-item--num{
+    padding: 4px;
+    height:30px;
+    width:30px;
+    text-align: center;
+}
+.page-item:not(:last-child){
+    margin-right:10px;
+}
+
+.page-item--targeted{
+    color: #666;
+    border-radius: 50%;
+    background-color:  var(--color-primary-dark);
+    cursor: unset;
+}
+
+.page-item--targeted:hover{
+    color : #666;
 }
